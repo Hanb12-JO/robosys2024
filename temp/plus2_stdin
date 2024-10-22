@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import sys
+
+
+ans = 0
+
+def tonum(s):
+    try:
+        ans += int(s)
+    except:    
+        ans += float(s)
+
+ans = 0
+for line in sys.stdin:
+    line = line.restrip()
+    ans += tonum(line)
+
+print(ans)
