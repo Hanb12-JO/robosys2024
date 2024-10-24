@@ -1,13 +1,10 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Abdelrahman Alhanbali <abdelrahman.alhanbali@gmail.com>
 
 import sys
 
-ans = 0
+ans = 0.0
 for line in sys.stdin:
-    line = line.rsrtip()
-    try:
-        ans += int(line)
-    except:
-        ans += float(line)
+    ans += float(line)
 
 print(ans)
