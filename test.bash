@@ -6,18 +6,18 @@ ng () {
 }
 
 return=0
-
+	### NORMAL INPUT ###
 out=$(seq 5 | ./plus)
-++ seq 5
-++ ./plus
-+ out=15
-
 [ "${out}" = 15 ] || ng "$LINENO"
-+ '['15 = 15']'
+	
+### STRANGE INPUT ###
+out=$(echo あ| ./plus)
+[ "$?" = 1 ] || ng "$LINENO"	
+[ "${out}" = "" ] || ng "$LINENO"
+ 
+out=$(echo | ./plus)
+[ "$?" = 1 ] || ng "$LINENO"	
+[ "${out}" = "" ] || ng "$LINENO"
 
-[ "${return}" = 0 ] && echo OK
-+ '['0 = 0']'
-+echo OK
-OK
+[ "$return" = 0 ] && echo OK
 exit $return
-;exit 0
