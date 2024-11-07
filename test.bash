@@ -1,4 +1,6 @@
 #!/bin/bash -xv
+# SPDX-FileCopyrightText: 2024 Abdelrahman Alhanbali <abdelrahman.alhanbali@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
 
 ng () {
 	echo ${1}が違うよ。
