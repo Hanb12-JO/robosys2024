@@ -13,8 +13,6 @@ def tonum(s):
 num = 0
 for line in sys.stdin:
     num = tonum(line)
-    ans = num / 2
-    remain = ans % 2
-
-print(remain)
+    ans = bin(num)
+print(ans[2:])
       
