@@ -3,4 +3,18 @@
 
 import sys
 
+def tonum(s):
+    try:
+        return int(s)
+    except:
+        return float(s)
 
+
+num = 0
+for line in sys.stdin:
+    num = tonum(line)
+    ans = num / 2
+    remain = ans % 2
+
+print(remain)
+      
